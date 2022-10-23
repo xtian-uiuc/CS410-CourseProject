@@ -1,3 +1,10 @@
-# CourseProject
+# UIUC CS 410 Text Information Systems - Final Project
 
-Please fork this repository and paste the github link of your fork on Microsoft CMT. Detailed instructions are on Coursera under Week 1: Course Project Overview/Week 9 Activities.
+Xiaohan Tian (xtian13@illinois.edu)
+
+## Update History
+
+### 10/23/2022
+
+Added:
+- `/01.Project.Proposal` Project Proposal
