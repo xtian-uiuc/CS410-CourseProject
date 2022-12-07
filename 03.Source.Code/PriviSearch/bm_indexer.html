@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bookmark Indexer</title>
+  <style>
+    body {
+      margin: 0px;
+      background: #fafafa;
+      font-family: Roboto, arial, sans-serif;
+      font-size: 14px;
+      color: #333333;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <p><img src="./img/logo2.png" style="width: 128px; height: 128px;" /></p>
+  <p>Index your existing bookmarks.</p>
+  <p>Please click the button below to start. The system will automatically open your bookmarked pages one by one and load the content then index them. </p>
+  <p><input type="button" id="btn_start_index" value="Start" /></p>
+  <p>Progress: <span id="label_index_progress">0 / 0</span></p>
+  <p id="hint_in_progress" style="font-weight: bold;">Please DO NOT close this window until the indexing is done.</p>
+  <p id="hint_done" style="display: none;">You can safely close this window now.</p>
+  <script src="bm_indexer.js"></script>
+</body>
+
+</html>

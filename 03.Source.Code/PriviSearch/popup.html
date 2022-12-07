@@ -1,0 +1,169 @@
+<html>
+
+<head>
+    <title>PriviSearch - A Private Search Engine Focusing on Your Bookmarks</title>
+    <style>
+        body {
+            margin: 0px;
+            background: #fafafa;
+            font-family: Roboto, arial, sans-serif;
+            font-size: 14px;
+            color: #333333;
+        }
+
+        .global_wrapper {
+            background-color: #fafafa;
+            width: 640px;
+            height: 360px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        .global_wrapper input[type="button"] {
+            border: 1px solid #999;
+            background-color: #fafafa;
+            font-size: 13px;
+            color: #333333;
+        }
+
+        .root_wrapper {
+            padding: 20px;
+            width: calc(100% - 40px);
+        }
+
+        .row {
+            position: relative;
+            margin: 0px 0px 0px 0px;
+        }
+
+        .input_row {
+            margin-top: 10px;
+        }
+
+        .input_row input {
+            border: #999 1px solid;
+            height: 28px;
+        }
+
+        .input_row input[type="text"] {
+            width: 280px;
+        }
+
+        .home_page {
+            padding-top: 64px;
+            padding-left: 100px;
+            /* display: none; */
+        }
+
+        .result_page {
+            padding: 20px;
+            display: none;
+        }
+
+        .header {
+            background-color: #fefefe;
+        }
+
+        .logo {
+            width: 128px;
+            height: 128px;
+            float: left;
+        }
+
+        .logo img {
+            width: 128px;
+            height: 128px;
+        }
+
+        .logo_mini .logo_holder {
+            width: 28px;
+            height: 28px;
+            margin-right: 5px;
+            float: left;
+        }
+
+        .logo_mini img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .logo_mini input {
+            border: #999 1px solid;
+            height: 28px;
+        }
+
+        .logo_mini input[type="text"] {
+            width: 280px;
+        }
+
+        .logo_title {
+            width: 300px;
+            padding: 80px 0px 0px 10px;
+            font-size: 39px;
+            font-family: Roboto, arial, sans-serif;
+            font-weight: bold;
+            float: left;
+        }
+
+        .result_row {
+            padding: 0px 0px 10px 0px;
+            margin: 0px;
+            color: #666666;
+        }
+
+        .result_row p {
+            margin-block-start: 0.3em;
+            margin-block-end: 0.3em;
+        }
+        
+        .result_row .title {
+            font-weight: bold;
+        }
+
+        .result_row .text_snippet b {
+            font-weight: bold;
+            color: coral;
+        }
+
+        .result_row.hr {
+            border-top: 1px solid #666666;
+            padding-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+    <script src="popup.js"></script>
+</head>
+
+<body>
+    <div class="global_wrapper">
+        <div class="home_page root_wrapper header">
+            <div class="row">
+                <div class="logo"><img src="./img/logo2.png" /></div>
+                <div class="logo_title">PriviSearch</div>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="row input_row">
+                <input type="text" id="text_query" />
+                <input type="button" id="btn_query" value="Search" />
+                <input type="button" id="btn_reindex" value="Rebuild Index" />
+                <!-- <input type="button" id="btn_reset" value="Reset" /> -->
+            </div>
+        </div>
+
+        <div class="result_page root_wrapper header">
+            <div class="row">
+                <div class="logo_mini">
+                    <div class="logo_holder"><img src="./img/logo2.png" /></div>
+                    <input type="text" id="text_query_alter" />
+                    <input type="button" id="btn_query_alter" value="Search" />
+                    <input type="button" id="btn_reindex_alter" value="Rebuild Index" />
+                </div>
+            </div>
+        </div>
+
+        <div class="result_page root_wrapper" id="result_container">
+        </div>
+    </div>
+</body>
+
+</html>

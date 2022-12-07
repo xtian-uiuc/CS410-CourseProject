@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "PriviSearch",
+  "description": "Your personal search engine. Query among your bookmarked pages.",
+  "version": "2022.11",
+  "icons": {
+    "16": "img/icon-16.png",
+    "32": "img/icon-32.png",
+    "48": "img/icon-48.png",
+    "128": "img/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "clipboardRead",
+    "clipboardWrite",
+    "tabs",
+    "scripting",
+    "bookmarks",
+    "storage",
+    "unlimitedStorage"
+  ], 
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
